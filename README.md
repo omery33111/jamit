@@ -16,13 +16,10 @@
 - [Technologies](#technologies) 🛠️
 - [Features](#features) 📕
   - [Feature List](#feature-list) 📄
-  - [Profile Hall](#profile-hall) ✏️
-  - [Admin Hall](#admin-hall) 🖊️
 - [Running Instructions](#running-instructions) 🖱️
   - [Deployments](#deployments) ✈️
   - [Back-end adjustment](#back-end-adjustment) 🖥️
   - [Front-end adjustment](#front-end-adjustment) 🖥️
-- [Admin & Staff](#admin--staff) 🤵
 - [Contact](#contact) 📞
 
 
