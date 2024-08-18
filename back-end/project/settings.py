@@ -27,6 +27,7 @@ AUTH_USER_MODEL = 'authentication.UserProfile'
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,19 +40,11 @@ INSTALLED_APPS = [
     'administrator',
     'authentication',
     'song',
-    'channels'
 ]
+ASGI_APPLICATION = 'project.asgi.application'
 
-ASGI_APPLICATION = 'project.routing.application'
 WSGI_APPLICATION = 'project.wsgi.application'
 
-
-
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels.layers.InMemoryChannelLayer',
-    },
-}
 
 
 
@@ -100,6 +93,12 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
+CHANNEL_LAYERS = {
+    'default':{
+        'BACKEND':'channels.layers.InMemoryChannelLayer'
+    }
+}
+
 ROOT_URLCONF = 'project.urls'
 
 TEMPLATES = [
@@ -127,17 +126,17 @@ TEMPLATES = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'project.sqlite3'
-#     }
-# }
-
-
 DATABASES = {
-   "default": dj_database_url.parse("postgresql://jamoveo_database_user:OptMzfclGxN7SALGAKxR1hFdLY8Qco2y@dpg-cr13nabtq21c73cogh7g-a.oregon-postgres.render.com/jamoveo_database")
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'project.sqlite3'
+    }
 }
+
+
+# DATABASES = {
+#    "default": dj_database_url.parse("postgresql://jamoveo_database_user:OptMzfclGxN7SALGAKxR1hFdLY8Qco2y@dpg-cr13nabtq21c73cogh7g-a.oregon-postgres.render.com/jamoveo_database")
+# }
 
 
 # Password validation
@@ -183,3 +182,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CORS_ALLOW_ALL_ORIGINS = True
+

@@ -14,7 +14,7 @@ const ResultsPage = () => {
   const [socket, setSocket] = useState<WebSocket | null>(null);
 
   useEffect(() => {
-    const socketInstance = new WebSocket('ws://localhost:8000/ws/livepage/');
+    const socketInstance = new WebSocket('ws://localhost:8000/ws/chat/');
     
     socketInstance.onopen = () => {
         console.log('WebSocket is open now.');
@@ -40,11 +40,13 @@ const ResultsPage = () => {
     };
 }, []);
 
+
+
 const handleStartLiveShow = (songId: number) => {
   if (socket && socket.readyState === WebSocket.OPEN) {
-      socket.send(JSON.stringify({ message: 'START_LIVE_SHOW' }));
+      socket.send(JSON.stringify({ message: "1" }));
   } else {
-      console.error('WebSocket is not open.');
+      console.error('DID NOT SEND.');
   }
 };
 
