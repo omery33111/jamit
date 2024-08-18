@@ -2,6 +2,8 @@ from datetime import timedelta
 from pathlib import Path
 import os
 
+import dj_database_url
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -124,17 +126,17 @@ TEMPLATES = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'project.sqlite3'
-    }
-}
-
-
 # DATABASES = {
-#    "default": dj_database_url.parse("postgres://jamoveo_database_2uwr_user:RlwJI1ECz86jt2UWWGxmyOcFFjTinv4V@dpg-cniutlv79t8c73bup3lg-a.oregon-postgres.render.com/jamoveo_database_2uwr")
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'project.sqlite3'
+#     }
 # }
+
+
+DATABASES = {
+   "default": dj_database_url.parse("postgresql://jamoveo_database_user:OptMzfclGxN7SALGAKxR1hFdLY8Qco2y@dpg-cr13nabtq21c73cogh7g-a.oregon-postgres.render.com/jamoveo_database")
+}
 
 
 # Password validation
