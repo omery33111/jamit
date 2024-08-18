@@ -86,7 +86,7 @@ const Login = () => {
                 </Button>
 
                 <span style={{marginLeft: "auto", whiteSpace: "nowrap"}}>
-                    New to the band? <a href="/authentication/register">Sign up</a>!
+                    New to the band? <a onClick = {() => navigate('/authentication/register')} style = {{color: "blue", textDecoration: "underline", cursor: "pointer"}}>Sign up</a>!
                 </span>
             </div>
     </form>

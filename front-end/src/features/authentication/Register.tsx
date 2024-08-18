@@ -112,11 +112,11 @@ const Register = () => {
                     </Button>
 
                     <span style={{ marginLeft: "auto", whiteSpace: "nowrap" }}>
-                        Already part of JaMoveo? <a href="/authentication/login">Sign in</a>!
+                        Already part of JaMoveo? <a onClick = {() => navigate('/authentication/login')} style = {{color: "blue", textDecoration: "underline", cursor: "pointer"}}>Sign in</a>!
                     </span>
 
                     <span style={{ marginLeft: "auto", whiteSpace: "nowrap" }}>
-                        <a href="/authentication/admin_register">Sign up</a> as Admin
+                        <a onClick = {() => navigate('/authentication/admin_register')} style = {{color: "blue", textDecoration: "underline", cursor: "pointer"}}>Sign up</a> as Admin
                     </span>
                 </div>
         </form>

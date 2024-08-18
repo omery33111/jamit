@@ -4,11 +4,11 @@
 #
 
 
-[![Live Netlify Server](https://img.shields.io/badge/Live%20on-Netlify-00ad9f.svg)](https://the-hebrew-adventure.netlify.app/)
+[![Live Netlify Server](https://img.shields.io/badge/Live%20on-Netlify-00ad9f.svg)](https://jammoveo.netlify.app/)
 
-[![Last Commit on GitHub](https://img.shields.io/github/last-commit/omery33111/jamoveo.svg)](https://github.com/omery33111/lops-dialectiq/commits/main)
+[![Last Commit on GitHub](https://img.shields.io/github/last-commit/omery33111/jamoveo.svg)](https://github.com/omery33111/jamoveo/commits/main)
 
-[![Pull Requests](https://img.shields.io/github/issues-pr/omery33111/jamoveo.svg?labelColor=24292E&logo=github&logoColor=white)](https://github.com/omery33111/dialectiq/pulls)
+[![Pull Requests](https://img.shields.io/github/issues-pr/omery33111/jamoveo.svg?labelColor=24292E&logo=github&logoColor=white)](https://github.com/omery33111/jamoveo/pulls)
 
 
 ## Table of Contents
@@ -68,7 +68,7 @@ Admins can sign up as administrators and plan live shows for the band. They can 
 
 ## Running Instructions
 ### Deployments
-The front-end of my website is hosted by [Netlify](https://the-hebrew-adventure.netlify.app/) while the database back-end is hosted on [Render](https://render.com/), allowing for seamless integration and efficient website management.
+The front-end of my website is hosted by [Netlify](https://jammoveo.netlify.app/) while the database back-end is hosted on [Render](https://render.com/), allowing for seamless integration and efficient website management.
 
 #
 
@@ -103,7 +103,7 @@ To run the program with SQLite3, mark all related databases, and ensure that all
 | 1 | `cd ..` | Go back to the main directory |
 | 2 | `cd .\front-end\` | Navigate to the front-end directory|
 | 3 | `npm install` | Install the front-end dependencies |
-| 4 | `dialectiq --> front-end --> src --> endpoints --> endpoints.ts` | Go to the "endpoints.ts" file in the "endpoints" directory. |
+| 4 | `jamoveo --> front-end --> src --> endpoints --> endpoints.ts` | Go to the "endpoints.ts" file in the "endpoints" directory. |
 
 To successfully run your server on local host, it's essential to ensure that your endpoints are correctly configured to direct you to the intended destination.
 
