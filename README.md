@@ -24,7 +24,7 @@
 
 
 ## Description
-"Jamoveo" - The place for rehearsals.
+"Jamoveo" - The place for band rehearsals.
 
 Jamoveo is a platform for our band to rehearse remotely.
 
