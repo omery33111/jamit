@@ -1,0 +1,152 @@
+
+
+/* Waiting for song loader */
+.loader {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  line-height: 1.2em;
+  display: inline-grid;
+  margin-top: 30dvh;
+}
+
+
+
+.admin-view-main {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  line-height: 1.2em;
+  display: inline-grid;
+  margin-top: 25dvh;
+}
+
+
+.loader:before,
+.loader:after {
+  content:"Waiting for the next song...";
+  grid-area: 1/1;
+  -webkit-mask: linear-gradient(90deg,#000 50%,#0000 0) 0 50%/2ch 100%;
+  color: #0000;
+  text-shadow: 0 0 0 #000,0 calc(var(--s,1)*1.2em) 0 #000;
+  animation: l15 1.2s infinite ease-in-out;
+}
+
+
+.loader:after {
+  -webkit-mask-position: 1ch 50%;
+  --s:-1;
+}
+
+
+@keyframes l15 {80%,100%{text-shadow:0 calc(var(--s,1)*-1.2em)  0 #000,0 0 0 #000}}
+body, html {
+  margin: 0;
+  height: 100%;
+}
+/* Waiting for song loader */
+
+
+
+/* Search song loader */
+.loader-search-song {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  clip-path: inset(0 3ch 0 0);
+  animation: l4 1.4s steps(4) infinite;
+  margin-bottom: 3dvh;
+}
+.loader-search-song:before {
+  content:"Search any song..."
+}
+@keyframes l4 {to{clip-path: inset(0 -1ch 0 0)}}
+/* Search song loader */
+
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40dvh;
+  text-align: center;
+}
+
+.live-page-container-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 40dvh;
+}
+
+
+.live-page-container {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin-left: 30dvh;
+  margin-right: 30dvh;
+  margin-top: 15dvh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.scrolling-button {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+
+.footer {
+  flex-shrink: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 57.6vh;
+}
+
+.content {
+  flex: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .loader {
+    font-size: 20px;
+  }
+
+  .live-page-container {
+    border: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 17dvh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+  }
+}
+
+
+
