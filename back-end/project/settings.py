@@ -132,6 +132,11 @@ DATABASES = {
 }
 
 
+# DATABASES = {
+#    "default": dj_database_url.parse("postgres://jamoveo_database_2uwr_user:RlwJI1ECz86jt2UWWGxmyOcFFjTinv4V@dpg-cniutlv79t8c73bup3lg-a.oregon-postgres.render.com/jamoveo_database_2uwr")
+# }
+
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
