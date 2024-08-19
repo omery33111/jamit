@@ -14,8 +14,7 @@ const ResultsPage = () => {
 
 
     useEffect(() => {
-        const socketUrl = process.env.REACT_BACKEND_URL || 'ws://localhost:8000/ws/chat/';
-        const socketInstance = new WebSocket(socketUrl);
+        const socketInstance = new WebSocket(process.env.REACT_APP_BACKEND_URL || 'ws://localhost:8000/ws/chat/');
 
         setSocket(socketInstance);
         
