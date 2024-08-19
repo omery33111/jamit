@@ -1,107 +1,115 @@
 [
     [
         {
-            "lyrics": "Hey"
+            "lyrics": "ואיך"
         },
         {
-            "lyrics": "Jude",
-            "chords": "F"
+            "lyrics": "שלא",
+            "chords": "Em"
         },
         {
-            "lyrics": "don't"
+            "lyrics": "אפנה"
         },
         {
-            "lyrics": "make"
-        },
-        {
-            "lyrics": "it"
-        },
-        {
-            "lyrics": "bad",
-            "chords": "C"
+            "lyrics": "לראות",
+            "chords": "Em/D"
         }
     ],
     [
         {
-            "lyrics": "Take"
+            "lyrics": "תמיד"
         },
         {
-            "lyrics": "a"
+            "lyrics": "איתה",
+            "chords": "Cmaj7"
         },
         {
-            "lyrics": "sad",
-            "chords": "C7"
+            "lyrics": "ארצה"
         },
         {
-            "lyrics": "song",
-            "chords": "C4/7"
-        },
-        {
-            "lyrics": "and"
-        },
-        {
-            "lyrics": "make"
-        },
-        {
-            "lyrics": "it"
-        },
-        {
-            "lyrics": "better",
-            "chords": "F"
+            "lyrics": "להיות",
+            "chords": "G"
         }
     ],
     [
         {
-            "lyrics": "Remember",
-            "chords": "Bb"
+            "lyrics": "שומרת"
         },
         {
-            "lyrics": "to"
+            "lyrics": "לי",
+            "chords": "Em"
         },
         {
-            "lyrics": "let"
+            "lyrics": "היא"
         },
         {
-            "lyrics": "her"
-        },
-        {
-            "lyrics": "into"
-        },
-        {
-            "lyrics": "your"
-        },
-        {
-            "lyrics": "heart",
-            "chords": "F"
+            "lyrics": "אמונים",
+            "chords": "Em/D"
         }
     ],
     [
         {
-            "lyrics": "Then"
+            "lyrics": "לא"
         },
         {
-            "lyrics": "you"
+            "lyrics": "מתרוצצת",
+            "chords": "Cmaj7"
         },
         {
-            "lyrics": "can"
+            "lyrics": "בגנים",
+            "chords": "G"
+        }
+    ],
+    [
+        {
+            "lyrics": "ובלילות",
+            "chords": "E"
         },
         {
-            "lyrics": "start",
-            "chords": "C"
+            "lyrics": "ובלילות",
+            "chords": "Em/D"
+        }
+    ],
+    [
+        {
+            "lyrics": "עולות"
         },
         {
-            "lyrics": "to"
+            "lyrics": "עולות",
+            "chords": "Cmaj7"
         },
         {
-            "lyrics": "make",
-            "chords": "C7"
+            "lyrics": "בי"
         },
         {
-            "lyrics": "it"
+            "lyrics": "מנגינות",
+            "chords": "G"
+        }
+    ],
+    [
+        {
+            "lyrics": "וזרם"
         },
         {
-            "lyrics": "better",
-            "chords": "F"
+            "lyrics": "דק",
+            "chords": "E"
+        },
+        {
+            "lyrics": "קולח",
+            "chords": "Em/D"
+        }
+    ],
+    [
+        {
+            "lyrics": "ותפילותי",
+            "chords": "Cmaj7"
+        },
+        {
+            "lyrics": "לרוח"
+        },
+        {
+            "lyrics": "נענות",
+            "chords": "G"
         }
     ]
 ]

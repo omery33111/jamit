@@ -91,6 +91,11 @@ const LivePage = () => {
 
         const isAdmin = JSON.parse(sessionStorage.getItem("isAdmin") as string);
 
+        const isHebrew = (text: string) => {
+            const hebrewRegex = /[\u0590-\u05FF]/;
+            return hebrewRegex.test(text);
+        };
+
     return (
         <div className="live-page-container">
             <h3 style={{ transform: "translateY(1dvh)", fontWeight: "bold" }}>
@@ -98,8 +103,8 @@ const LivePage = () => {
             </h3>
 
             <div className="live-page-container-content">
-                <div style={{ textAlign: "left", marginTop: "5vh" }}>
-                    <div>
+            <div style={{ textAlign: "left", marginTop: "5vh", direction: isHebrew(singleSong.lines[0].lyrics) ? "rtl" : "ltr" }}>
+            <div>
                         {singleSong.lines.map((line) => (
                             <table key={line.line_number} className = "table-line-number">
                                 <tbody>

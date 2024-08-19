@@ -85,7 +85,7 @@ body, html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 40dvh;
+  height: 50dvh;
 }
 
 
@@ -161,7 +161,7 @@ body, html {
 .table-line-number {
   margin-bottom: "15px";
   text-align: "center";
-  font-size: 20;
+  font-size: 20px;
 }
 
 
