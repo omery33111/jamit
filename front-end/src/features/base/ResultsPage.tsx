@@ -15,7 +15,7 @@ const ResultsPage = () => {
 
 
     useEffect(() => {
-        const socketInstance = new WebSocket('wss://jammoveo-backend.onrender.com/ws/chat/');
+        const socketInstance = new WebSocket('wss://jamoveo-backend.onrender.com/ws/chat/');
         setSocket(socketInstance);
         
         socketInstance.onopen = () => {
