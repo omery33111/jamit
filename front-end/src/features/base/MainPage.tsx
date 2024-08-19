@@ -38,7 +38,7 @@ const MainPage = () => {
 
 
     useEffect(() => {
-        const socketInstance = new WebSocket('ws://localhost:8000/ws/chat/');
+        const socketInstance = new WebSocket('ws://jamoveo-backend.onrender.com/ws/chat/');
         
         socketInstance.onopen = () => {
             console.log('WebSocket is open now.');

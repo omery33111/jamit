@@ -19,8 +19,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'default_secret_key_if_not_set'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['jamoveo-backend.onrender.com', 'localhost', '127.0.0.1', '*']
 
 AUTH_USER_MODEL = 'authentication.UserProfile'
 
@@ -94,9 +93,12 @@ MIDDLEWARE = [
 ]
 
 CHANNEL_LAYERS = {
-    'default':{
-        'BACKEND':'channels.layers.InMemoryChannelLayer'
-    }
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('redis://:password@hostname:6379/0')],
+        },
+    },
 }
 
 ROOT_URLCONF = 'project.urls'
