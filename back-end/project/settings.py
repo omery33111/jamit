@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'authentication',
     'song',
 ]
+
 ASGI_APPLICATION = 'project.asgi.application'
 
 WSGI_APPLICATION = 'project.wsgi.application'
