@@ -19,7 +19,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'default_secret_key_if_not_set'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jamoveo-backend.onrender.com', 'localhost', '127.0.0.1', '*']
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')
 
 AUTH_USER_MODEL = 'authentication.UserProfile'
 
@@ -135,7 +135,7 @@ TEMPLATES = [
 
 
 DATABASES = {
-   "default": dj_database_url.parse("postgresql://jamoveo_database_user:OptMzfclGxN7SALGAKxR1hFdLY8Qco2y@dpg-cr13nabtq21c73cogh7g-a.oregon-postgres.render.com/jamoveo_database")
+   "default": dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 

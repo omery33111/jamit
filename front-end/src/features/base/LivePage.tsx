@@ -39,7 +39,7 @@ const LivePage = () => {
   
   
     useEffect(() => {
-        const socketInstance = new WebSocket(process.env.REACT_APP_BACKEND_URL || 'ws://localhost:8000/ws/chat/');
+      const socketInstance = new WebSocket('wss://jamoveo-backend.onrender.com/ws/chat/');
 
         setSocket(socketInstance);
         
@@ -89,19 +89,19 @@ const LivePage = () => {
         };
       
 
+        const isAdmin = JSON.parse(sessionStorage.getItem("isAdmin") as string);
 
     return (
         <div className="live-page-container">
             <h3 style={{ transform: "translateY(1dvh)", fontWeight: "bold" }}>
                 {singleSong.song_name} - {singleSong.artist}
             </h3>
-            <button onClick={handleQuitLiveShow}>quit</button>
 
             <div className="live-page-container-content">
                 <div style={{ textAlign: "left", marginTop: "5vh" }}>
                     <div>
                         {singleSong.lines.map((line) => (
-                            <table key={line.line_number} style={{ marginBottom: "15px", textAlign: "center", fontSize: 20 }}>
+                            <table key={line.line_number} className = "table-line-number">
                                 <tbody>
                                     <tr>
                                         {line.lyrics.split(' ').map((word, index) => (
@@ -124,9 +124,16 @@ const LivePage = () => {
                 </div>
             </div>
 
-                <Button onClick={toggleScrolling} className="scrolling-button" style={{ backgroundColor: isScrolling ? 'red' : "#8B6A3D" }}>
+                <Button onClick={toggleScrolling} className="scrolling-button" style={{ backgroundColor: isScrolling ? 'blue' : "#8B6A3D" }}>
                     {isScrolling ? 'Stop Auto Scroll' : 'Auto Scroll'}
                 </Button>
+                
+                {isAdmin && (
+                                    <Button onClick={handleQuitLiveShow} className="quit-button" style={{ backgroundColor: 'red'}}>
+                                    END SHOW
+                                </Button>
+                )}
+
         </div>
     );
 }

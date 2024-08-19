@@ -112,6 +112,17 @@ body, html {
 }
 
 
+.quit-button {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+
 .footer {
   flex-shrink: 0;
   width: 100%;
@@ -147,6 +158,12 @@ body, html {
   animation: slideDown 0.5s ease;
 }
 
+.table-line-number {
+  margin-bottom: "15px";
+  text-align: "center";
+  font-size: 20;
+}
+
 
 @media only screen and (max-width: 1024px) {
   .loader {
@@ -161,7 +178,31 @@ body, html {
     align-items: center;
     justify-content: center;
     text-align: center;
-    
+  }
+
+  .scrolling-button {
+    position: fixed;
+    top: 90%;
+    right: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  
+  .quit-button {
+    position: fixed;
+    top: 90%;
+    right: 200px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+
+
+  .table-line-number {
+    font-size: 17px
   }
 }
 
