@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 
 
-
 const ResultsPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -15,7 +14,9 @@ const ResultsPage = () => {
 
 
     useEffect(() => {
-        const socketInstance = new WebSocket('wss://jamoveo-backend.onrender.com/ws/chat/');
+        const socketUrl = process.env.REACT_BACKEND_URL || 'ws://localhost:8000/ws/chat/';
+        const socketInstance = new WebSocket(socketUrl);
+
         setSocket(socketInstance);
         
         socketInstance.onopen = () => {
@@ -31,6 +32,7 @@ const ResultsPage = () => {
             }
         };
 
+        
         setTimeout(() => {
             socketInstance.onerror = (error) => {
                 console.error('WebSocket error:', error);
@@ -39,7 +41,7 @@ const ResultsPage = () => {
         }, 500);
 
 
-
+        
         socketInstance.onclose = () => {
             console.log('WebSocket is closed now.');
             setSocketStatus({isOpen: false});
@@ -62,7 +64,7 @@ const ResultsPage = () => {
     } else {
         console.error('WebSocket is not open. Current status:', socketStatus.isOpen);
     }
-};
+    };
 
 
   return (

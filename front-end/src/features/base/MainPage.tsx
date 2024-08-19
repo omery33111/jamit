@@ -38,7 +38,8 @@ const MainPage = () => {
 
 
     useEffect(() => {
-      const socketInstance = new WebSocket('wss://jamoveo-backend.onrender.com/ws/chat/');
+      const socketUrl = process.env.REACT_BACKEND_URL || 'ws://localhost:8000/ws/chat/';
+      const socketInstance = new WebSocket(socketUrl);
 
         socketInstance.onopen = () => {
             console.log('WebSocket is open now.');
@@ -60,8 +61,8 @@ const MainPage = () => {
 
 
         socketInstance.onclose = () => {
-            console.log('WebSocket is closed now.');
-        };
+          console.log('WebSocket is closed now.');
+      };
 
 
         return () => {
@@ -69,6 +70,7 @@ const MainPage = () => {
                 socketInstance.close();
             }
         };
+
     }, [navigate]);
 
   
