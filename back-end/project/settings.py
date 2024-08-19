@@ -93,12 +93,9 @@ MIDDLEWARE = [
 ]
 
 CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [('redis://:password@hostname:6379/0')],
-        },
-    },
+    'default':{
+        'BACKEND':'channels.layers.InMemoryChannelLayer'
+    }
 }
 
 ROOT_URLCONF = 'project.urls'
