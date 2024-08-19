@@ -1,53 +1,67 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
-import io, { Socket } from 'socket.io-client';
+
 
 
 
 const ResultsPage = () => {
-    
   const location = useLocation();
   const navigate = useNavigate();
   const { searchResults } = location.state || { searchResults: [] };
 
   const [socket, setSocket] = useState<WebSocket | null>(null);
-
-  useEffect(() => {
-    const socketInstance = new WebSocket('ws://localhost:8000/ws/chat/');
-    
-    socketInstance.onopen = () => {
-        console.log('WebSocket is open now.');
-    };
-
-    socketInstance.onmessage = (event) => {
-        console.log('Message from server ', event.data);
-    };
+  const [socketStatus, setSocketStatus] = useState<{ isOpen: boolean }>({isOpen: false});
 
 
-    socketInstance.onerror = (error) => {
-        console.error('WebSocket error:', error);
-    };
+    useEffect(() => {
+        const socketInstance = new WebSocket('ws://localhost:8000/ws/chat/');
+        setSocket(socketInstance);
+        
+        socketInstance.onopen = () => {
+            console.log('WebSocket is open now.');
+            setSocketStatus({ isOpen: true });
+        };
 
-    socketInstance.onclose = () => {
-        console.log('WebSocket is closed now.');
-    };
+        socketInstance.onmessage = (event) => {
+            const data = JSON.parse(event.data);
 
-    return () => {
-        if (socketInstance) {
-            socketInstance.close();
-        }
-    };
-}, []);
+            if (data.room) {
+                navigate(`livepage/${data.room}`);
+            }
+        };
+
+        setTimeout(() => {
+            socketInstance.onerror = (error) => {
+                console.error('WebSocket error:', error);
+                setSocketStatus({isOpen: false});
+            };
+        }, 500);
 
 
 
-const handleStartLiveShow = (songId: number) => {
-  if (socket && socket.readyState === WebSocket.OPEN) {
-      socket.send(JSON.stringify({ message: "1" }));
-  } else {
-      console.error('DID NOT SEND.');
-  }
+        socketInstance.onclose = () => {
+            console.log('WebSocket is closed now.');
+            setSocketStatus({isOpen: false});
+        };
+
+        setSocketStatus({isOpen: false});
+
+        return () => {
+            if (socketInstance) {
+                socketInstance.close();
+            }
+        };
+    }, [navigate]);
+
+
+
+  const handleStartLiveShow = (songId: number) => {
+    if (socketStatus.isOpen && socket) {
+        socket.send(JSON.stringify({ room: songId.toString() }));
+    } else {
+        console.error('WebSocket is not open. Current status:', socketStatus.isOpen);
+    }
 };
 
 

@@ -62,3 +62,4 @@ class ChatConsumer(WebsocketConsumer):
             'type': 'show',
             'room': room
         }))
+        

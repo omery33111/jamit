@@ -35,6 +35,42 @@ const MainPage = () => {
   const handleViewResults = () => {
     navigate('/results', { state: { searchResults: songs } });
   };
+
+
+    useEffect(() => {
+        const socketInstance = new WebSocket('ws://localhost:8000/ws/chat/');
+        
+        socketInstance.onopen = () => {
+            console.log('WebSocket is open now.');
+        };
+
+        socketInstance.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+
+            if (data.room) {
+                navigate(`results/livepage/${data.room}`);
+            }
+        };
+
+        setTimeout(() => {
+            socketInstance.onerror = (error) => {
+                console.error('WebSocket error:', error);
+            };
+        }, 500);
+
+
+        socketInstance.onclose = () => {
+            console.log('WebSocket is closed now.');
+        };
+
+
+        return () => {
+            if (socketInstance) {
+                socketInstance.close();
+            }
+        };
+    }, [navigate]);
+
   
   return (
     <div className="main-container">
@@ -85,8 +121,11 @@ const MainPage = () => {
         </div>
 
         ) : (
-
+        
+          <>
         <div className="loader"></div>
+          
+        </>
 
       )}
       

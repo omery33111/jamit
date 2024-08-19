@@ -131,6 +131,23 @@ body, html {
   flex: 1;
 }
 
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-down {
+  animation: slideDown 0.5s ease;
+}
+
+
 @media only screen and (max-width: 1024px) {
   .loader {
     font-size: 20px;

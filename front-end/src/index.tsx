@@ -30,7 +30,7 @@ root.render(
 
             <Route path = "/results" element={<ResultsPage />} />
 
-            <Route path = "/livepage">
+            <Route path = "/results/livepage">
               <Route index element = {<LivePage />} />
               <Route path = ":id" element = {<LivePage />} />
             </Route>
