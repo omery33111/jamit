@@ -4,10 +4,10 @@
 
 
 // ------------------------- MYSERVER ENDPOINTS:
-export const myServer = "http://127.0.0.1:8000";
+// export const myServer = "http://127.0.0.1:8000";
 
 
-// export const myServer = "https://jamoveo-ao2v.onrender.com";
+export const myServer = "https://jamoveo-ao2v.onrender.com";
 
 
 
