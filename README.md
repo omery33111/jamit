@@ -109,7 +109,10 @@ To successfully run your server on local host, it's essential to ensure that you
 
 Ensure to designate any external server as marked and remove the marking from the local host server as shown:
 
-![image](https://github.com/user-attachments/assets/92080a67-cabc-4114-8cb4-7f77c7fa87cd)
+** **This file is only necessary for local hosting and should be deleted in production**
+
+![image](https://github.com/user-attachments/assets/b7b473b5-e8c3-4ffe-b0c3-703b65aa8f8c)
+
 
 
 | ...4 |  |  |
@@ -120,7 +123,7 @@ Ensure to designate any external server as marked and remove the marking from th
 
 
 
-### Contact
+## Contact
 
 📧 omery33111@gmail.com
 
