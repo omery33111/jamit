@@ -1,17 +1,18 @@
+import { lazy, Suspense } from 'react';
+
 import { Outlet } from 'react-router-dom';
-import MyNavbar from './features/base/MyNavbar';
-import MyFooter from './features/base/MyFooter';
 import { Container } from 'react-bootstrap';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import './index.css';
+import Loading from './features/base/Loading';
+
+const GenFooter = lazy(() => import('./features/base/GenFooter'));
+const GenNavbar = lazy(() => import('./features/base/GenNavbar'));
 
 
 
 function App() {
-
-
-  
   return (
     <div className="App">
 
@@ -26,13 +27,17 @@ function App() {
         pauseOnHover
         theme="dark"/>
 
-      <MyNavbar />
+      <Suspense fallback={<Loading />}>
+      <GenNavbar />
+      </Suspense>
 
     <Container>
       <Outlet />
     </Container>
 
-      <MyFooter />
+      <Suspense fallback={<Loading />}>
+      <GenFooter />
+      </Suspense>
       
     </div>
   );

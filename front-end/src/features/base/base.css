@@ -120,6 +120,7 @@ body, html {
   border: none;
   border-radius: 5px;
   z-index: 1000;
+  background-color: red;
 }
 
 
@@ -140,6 +141,41 @@ body, html {
 
 .content {
   flex: 1;
+}
+
+.footer-text {
+  color: white;
+}
+
+.footer-icons {
+  margin: 10px 20px
+}
+
+.white-text {
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: white;
+}
+
+.username,
+.admin-badge {
+  color: #FF9100;
+}
+
+.logout {
+  color: red;
+  cursor: pointer;
+}
+
+.login-register {
+  display: flex;
+  color: white;
+  align-items: center;
 }
 
 
@@ -164,6 +200,76 @@ body, html {
   font-size: 20px;
 }
 
+.chord-map {
+  color: blue;
+  font-weight: bold;
+  margin-bottom: -5px
+}
+
+.chord-index-map {
+  padding: 0 7px;
+  vertical-align: bottom;
+}
+
+.live-page-title {
+  transform: translateY(1dvh);
+  font-weight: bold;
+}
+
+.live-container {
+  text-align: "left";
+  margin-top: "5vh"; 
+}
+
+
+.admin-view-search-container {
+  display: flex;
+  gap: 5%;
+}
+
+.admin-view-search-box {
+  width: 250px;
+  margin-top: 27px;
+}
+
+.admin-view-search-song-info {
+  display: flex;
+  align-items: center;
+}
+
+.admin-view-search-song-info p {
+  margin-top: 20px;
+}
+
+.admin-view-search-button {
+  border: none;
+}
+
+.admin-view-search-button-disabled {
+  border: 1px solid #ddd;
+  cursor: not-allowed;
+  border: none;
+}
+
+.empty-search-message {
+  height: 6dvh;
+}
+
+.no-song-message {
+  font-size: 20px;
+  color: #FF9100;
+}
+
+.main-page-button {
+  background-color: #A28B55;
+  border: 1px solid black;
+  width: 200px;
+}
+
+.start-live-show {
+  color: #FF9100;
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 1024px) {
   .loader {

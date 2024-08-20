@@ -1,16 +1,17 @@
-import { useForm, Controller } from 'react-hook-form';
-import { registerAdminAsync } from './authenticationSlice';
+import { FormEvent, useState } from 'react';
+import './authentication.css';
+import { registerUserAsync } from './authenticationSlice';
 import { useAppDispatch } from '../../app/hooks';
+import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { Button, FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material';
+import { Controller, useForm } from 'react-hook-form';
 import { Register } from '../../models/Authentication';
-import 'react-toastify/dist/ReactToastify.css';
-import './authentication.css';
 
 
 
-const AdminRegister = () => {
+const UserRegister = () => {
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
 
@@ -34,7 +35,7 @@ const AdminRegister = () => {
             instrument: data.instrument,
         };
 
-        dispatch(registerAdminAsync(userData));
+        dispatch(registerUserAsync(userData));
         navigate('/authentication/login');
         toast.success(`Welcome to the band ${data.username}!`);
     };
@@ -46,22 +47,23 @@ const AdminRegister = () => {
             </div>
 
             <div className="register-message">
-                <span>Interested in being the <b className="band-manager-highlight">band manager</b>? Register now!</span>
+                <span>A member of Moveo? Sign up to join JaMoveo and rehearse with us!</span>
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-group">
-                    <Controller name="username"
-                                control={control}
-                                rules={{ required: true }}
-                                render={({ field }) => (<TextField
-                                                        type="text"
-                                                        label="Username"
-                                                        fullWidth
-                                                        margin="normal"
-                                                        {...field}
-                                                        error={!!errors.username}
-                                                        helperText={errors.username ? "Username is required" : ""} />)}
+                    <Controller
+                        name="username"
+                        control={control}
+                        rules={{ required: true }}
+                        render={({ field }) => (<TextField
+                                                type="text"
+                                                label="Username"
+                                                fullWidth
+                                                margin="normal"
+                                                {...field}
+                                                error={!!errors.username}
+                                                helperText={errors.username ? "Username is required" : ""} />)}
                     />
                 </div>
 
@@ -121,10 +123,15 @@ const AdminRegister = () => {
                     <span className="login-link-container">
                         Already part of JaMoveo? <a onClick={() => navigate('/authentication/login')} className="login-link">Sign in</a>!
                     </span>
+
+                    <span className="admin-signup-link-container">
+                        <a onClick={() => navigate('/authentication/admin_register')} className="admin-signup-link">Sign up</a> as Admin
+                    </span>
                 </div>
+
             </form>
         </div>
-    );
+    )
 }
 
-export default AdminRegister;
+export default UserRegister;

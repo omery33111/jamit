@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
-import { Line, SongState } from '../../models/Song';
-import { searchSong } from '../administrator/administratorAPI';
+import { SongState } from '../../models/Song';
 import { getSingleSong } from './songAPI';
 
 
@@ -10,8 +9,8 @@ const initialState: SongState = {
   songs: [],
   singleSong: { id: 0, song_name: "", artist: "", lines: [{ line_number: 0, lyrics: "", chords: {} }] },
 
-  lines: [],
-  singleLine: { line_number: 0, lyrics: "", chords: {} }
+  isLoading: false,
+  isError: false
 }
 
 
@@ -37,16 +36,26 @@ export const songSlice = createSlice({
     builder
     .addCase(getSingleSongAsync.fulfilled, (state, action) => {
       state.singleSong = action.payload;
+      state.isLoading = false;
+      state.isError = false;
+    })
+    .addCase(getSingleSongAsync.pending, (state, action) => {
+      state.isLoading = true;
+      state.isError = false;
+    })
+    .addCase(getSingleSongAsync.rejected, (state, action) => {
+      state.isLoading = false;
+      state.isError = true;
     })
   },
 });
 
 
 
-export const selectSingleSong = (state: RootState) => state.song.singleSong;
-export const selectSingleLine = (state: RootState) => state.song.singleLine;
+export const selectSongError = (state: RootState) => state.song.isError;
+export const selectSongLoading = (state: RootState) => state.song.isLoading;
 
-export const selectSongLines = (state: RootState) => state.song.lines;
+export const selectSingleSong = (state: RootState) => state.song.singleSong;
 
 
 

@@ -3,29 +3,29 @@
 
 
 
-// ------------------------- MYSERVER ENDPOINTS:
-// export const myServer = "http://127.0.0.1:8000";
+// ------------------------- URL_BACKEND ENDPOINTS:
+// export const URL_BACKEND = "http://127.0.0.1:8000";
 
 
-export const myServer = "https://jamoveo-backend.onrender.com";
+export const URL_BACKEND = "https://jamoveo-backend.onrender.com";
 
 
 
 
 
 // ------------------------- AUTHENTICATION ENDPOINTS:
-export const authenticationURL = `${myServer}/authentication`;
+export const authenticationURL = `${URL_BACKEND}/authentication`;
 
 
 
 
 
 // ------------------------- SONG ENDPOINTS:
-export const songURL = `${myServer}/song`;
+export const songURL = `${URL_BACKEND}/song`;
 
 
 
 
 
 // ------------------------- ADMINISTRATOR ENDPOINTS:
-export const administratorURL = `${myServer}/administrator`;
+export const administratorURL = `${URL_BACKEND}/administrator`;

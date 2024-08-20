@@ -1,0 +1,32 @@
+.login-page, .register-page {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.login-logo-container, .register-logo-container {
+    margin-bottom: 20px;
+}
+
+.login-button-container, .register-button-container, .button-container {
+    display: flex;
+    align-items: center;
+}
+
+.login-signup-link, .register-login-link, .login-link-container, .admin-signup-link-container {
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.signup-link, .login-link, .admin-signup-link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.register-button, .create-account-button {
+    background-color: #A28B55;
+}
+
+.band-manager-highlight {
+    color: #FF9100;
+}

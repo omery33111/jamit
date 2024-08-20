@@ -25,6 +25,6 @@ export interface SongState {
   songs: Song[];
   singleSong: Song;
 
-  lines: Line[];
-  singleLine: Line;
+  isLoading: boolean;
+  isError: boolean;
 }
