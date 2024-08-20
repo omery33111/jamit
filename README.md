@@ -62,7 +62,7 @@ Admins can sign up as administrators and plan live shows for the band. They can 
 * Authentication system
 * Search song
 * Start / stop live show
-* Automatically navigate band users to the live page during a live show
+* Automatically redirect band members at the start and end of a show
 * Getting chords & lyrics orderly
 
 
@@ -87,7 +87,7 @@ In order to make the software work properly in your local host, the steps below 
 
 To run the program with SQLite3, mark all related databases, and ensure that all relevant databeses are configured.
 
-![image](https://github.com/user-attachments/assets/e1de1291-f1bc-44c3-ad6a-d961c06f569d)
+![image](https://github.com/user-attachments/assets/b54b0471-294d-4341-8c2f-40fedff8af54)
 
 
 | ...6 |  |  |
