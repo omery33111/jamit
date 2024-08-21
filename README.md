@@ -34,6 +34,8 @@ Users register their instrument, admins schedule rehearsals and select songs. Du
 ## Technologies
 * Django: serves the option to use powerful features to build complex applications quickly.
 
+* WebSocket: a protocol that enables real-time, full-duplex communication between a server and a client, allowing for instant data transfer and updates.
+
 * Django REST framework: a powerful and flexible toolkit for building Web APIs.
 
 * Simple JWT: a JSON Web Token authentication library for Django that simplifies secure user authentication.
