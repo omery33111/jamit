@@ -93,7 +93,8 @@ To run the program with SQLite3, mark all related databases, and ensure that all
 | ...6 |  |  |
 | --- | --- | --- |
 | 7 | `py manage.py migrate` | Apply the database migrations |
-| 8 | `py manage.py runserver` | Run the back-end server |
+| 8 | `py manage.py load_songs` | Load the data into your database |
+| 9 | `daphne -p 8000 project.asgi:application` | Run the back-end server |
 
 
 ### Front-end adjustment
@@ -103,21 +104,7 @@ To run the program with SQLite3, mark all related databases, and ensure that all
 | 1 | `cd ..` | Go back to the main directory |
 | 2 | `cd .\front-end\` | Navigate to the front-end directory|
 | 3 | `npm install` | Install the front-end dependencies |
-| 4 | `jamoveo --> front-end --> src --> endpoints --> endpoints.ts` | Go to the "endpoints.ts" file in the "endpoints" directory. |
-
-To successfully run your server on local host, it's essential to ensure that your endpoints are correctly configured to direct you to the intended destination.
-
-Ensure to designate any external server as marked and remove the marking from the local host server as shown:
-
-** **This file is only necessary for local hosting and should be deleted in production**
-
-![image](https://github.com/user-attachments/assets/b7b473b5-e8c3-4ffe-b0c3-703b65aa8f8c)
-
-
-
-| ...4 |  |  |
-| --- | --- | --- |
-| 5 | `npm start` | Run the front-end server |
+| 4 | `npm start` | Run the front-end server |
 
 **Now you will be able to access JAMOVEO in your local host** "http://localhost:3000".
 

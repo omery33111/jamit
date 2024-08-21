@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt.token_blacklist",
     'administrator',
     'authentication',
-    'song',
+    'song'
 ]
 
 ASGI_APPLICATION = 'project.asgi.application'
