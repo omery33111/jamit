@@ -101,6 +101,8 @@ const LivePage = () => {
       // Toggle the isScrolling state.
       setIsScrolling(!isScrolling);
     };
+    console.log(singleSong.lines);
+
 
     return (
       <div>
@@ -123,17 +125,14 @@ const LivePage = () => {
                           <tbody>
                             <tr>
                               {line.lyrics.split(" ").map((word, index) => (
-
                                 <td key={index} className="chord-index-map">
-                                  {line.chords && Object.entries(line.chords).map(([chord, position]) => (position === index + 1 ? (
+                                  {line.chords && Object.entries(line.chords).map(([chord, position]) => (Number(chord) === index + 1 ? (
                                         <div key={chord} className="chord-map">
-                                          {chord}
+                                          {position}
                                         </div>) : null
                                     ))}
-
                                   <div>{word}</div>
                                 </td>
-
                               ))}
                             </tr>
                           </tbody>
