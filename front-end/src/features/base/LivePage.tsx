@@ -101,8 +101,6 @@ const LivePage = () => {
       // Toggle the isScrolling state.
       setIsScrolling(!isScrolling);
     };
-    console.log(singleSong.lines);
-
 
     return (
       <div>
