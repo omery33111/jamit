@@ -32,21 +32,21 @@ Users register their instrument, admins schedule rehearsals and select songs. Du
 
 
 ## Technologies
-* Django: serves the option to use powerful features to build complex applications quickly.
+* **Django**: serves the option to use powerful features to build complex applications quickly.
 
-* WebSocket: a protocol that enables real-time, full-duplex communication between a server and a client, allowing for instant data transfer and updates.
+* **WebSocket**: a protocol that enables real-time, full-duplex communication between a server and a client, allowing for instant data transfer and updates.
 
-* Django REST framework: a powerful and flexible toolkit for building Web APIs.
+* **Django REST framework**: a powerful and flexible toolkit for building Web APIs.
 
-* Simple JWT: a JSON Web Token authentication library for Django that simplifies secure user authentication.
+* **Simple JWT**: a JSON Web Token authentication library for Django that simplifies secure user authentication.
 
-* React: a JavaScript library for building user interfaces, which enables fast and dynamic rendering of components.
+* **React**: a JavaScript library for building user interfaces, which enables fast and dynamic rendering of components.
 
-* Redux: a state management library that allows for centralized management of application state.
+* **Redux**: a state management library that allows for centralized management of application state.
 
-* TypeScript: a superset of JavaScript that adds static types, enabling better code organization and easier debugging.
+* **TypeScript**: a superset of JavaScript that adds static types, enabling better code organization and easier debugging.
 
-* SQLite3: a lightweight and self-contained relational database management system that's ideal for smaller-scale projects.
+* **SQLite3**: a lightweight and self-contained relational database management system that's ideal for smaller-scale projects.
 
 
 
